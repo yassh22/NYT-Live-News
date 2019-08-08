@@ -1,33 +1,24 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .newResults {
     display: grid;
     grid-auto-rows: 275px;
   }
-  
-  .parent {
-      position: relative;
-  }
-  
-  .parent p {
-      position: absolute;
-      bottom: 0.5px;
-      z-index: 1;
-      padding: 10px 10px;
-      font-family: 'Open Sans normal 300';
-      text-align: left;
-      font-size: 16px;
-      background-color: rgba(black, 0.5);
-  }
-  
-  .parent img {
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-  }
-  
+    
   @media screen and (min-width: 600px) {
     .newResults {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .combine {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
   }
 

@@ -10,10 +10,15 @@ $(function() {
         $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${newsInput}.json?api-key=Ov7TMBFdahAkreAEBSG1GAZGkw7Eznm2`)
         .done(function(data) {
         console.log(data)
+ 
+        let array = []
+        for (let i=0; i < 12; i++) {
+            array.push(data.results[i])
+        }
 
-            $.each(data.results, function () {
+            $.each(array, function (index, value) {
 
-                let newsTitle = this.abstract
+                let newsTitle = value.abstract
                 let picURL = this.multimedia[4].url
 
                 // create div  to hold album cover and name
