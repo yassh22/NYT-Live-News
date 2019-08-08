@@ -13,11 +13,11 @@ $(function() {
 
             $.each(data.results, function () {
 
-                let newsTitle = this.title
+                let newsTitle = this.abstract
                 let picURL = this.multimedia[4].url
 
                 // create div  to hold album cover and name
-                $('.newResults').append(`<img src="${picURL}"><p>${newsTitle}</p>`).children().addClass('remove')
+                $('.newResults').append(`<div class="parent"><img src="${picURL}"><p>${newsTitle}</p></div>`).children().addClass('select')
                 
                 })
             })

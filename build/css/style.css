@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Open Sans normal 300';
+  src: url("OpenSans-Light.eot");
+  src: url("OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("OpenSans-Light.woff2") format("woff2"), url("OpenSans-Light.woff") format("woff"), url("OpenSans-Light.ttf") format("truetype"), url("OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans bold normal';
+  src: url("OpenSans-Bold.eot");
+  src: url("OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("OpenSans-Bold.woff2") format("woff2"), url("OpenSans-Bold.woff") format("woff"), url("OpenSans-Bold.ttf") format("truetype"), url("OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans bold italic';
+  src: url("OpenSans-BoldItalic.eot");
+  src: url("OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("OpenSans-BoldItalic.woff2") format("woff2"), url("OpenSans-BoldItalic.woff") format("woff"), url("OpenSans-BoldItalic.ttf") format("truetype"), url("OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans italic 300';
+  src: url("OpenSansLight-Italic.eot");
+  src: url("OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("OpenSansLight-Italic.woff2") format("woff2"), url("OpenSansLight-Italic.woff") format("woff"), url("OpenSansLight-Italic.ttf") format("truetype"), url("OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -70,3 +98,36 @@ footer p {
 
 .newResults {
   color: white; }
+
+.newResults {
+  display: grid;
+  grid-auto-rows: 275px; }
+
+.parent {
+  position: relative; }
+
+.parent p {
+  position: absolute;
+  bottom: 0.5px;
+  z-index: 1;
+  padding: 10px 10px;
+  font-family: 'Open Sans normal 300';
+  text-align: left;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.parent img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+@media screen and (min-width: 600px) {
+  .newResults {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; } }
+
+@media screen and (min-width: 1240px) {
+  .newResults {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; } }
