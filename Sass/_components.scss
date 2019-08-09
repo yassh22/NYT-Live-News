@@ -14,11 +14,14 @@
 }
 
 footer p {
-	color: #c2c2c2;
+    color: #c2c2c2;
+    padding-bottom: 10px;
+    padding-top: 275px;
 }
 
 .newResults {
-	color: white;
+    color: white;
+    margin-bottom: -220px;
 }
 
 .parent {
@@ -44,8 +47,32 @@ footer p {
 
 @media screen and (min-width: 600px) {
     .combine {
-        // max-width: 400px;
         margin-top: 20px;
         padding: 20px 100px 50px;
+    }
+
+    footer p {
+        margin-top: 200px;
+    }
+
+    .newResults {
+        margin-bottom: -465px;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .combine {
+        justify-content: flex-start;
+        padding-right: 700px;
+    }
+
+    footer p {
+        text-align: left;
+        margin-left: 100px;
+        margin-top: -30px;
+    }
+
+    .newResults {
+        margin-bottom: -235px;
     }
 }
