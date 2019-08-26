@@ -4,8 +4,27 @@ $(function() {
     $('.frontDrop').on('change', function(event) {
         event.preventDefault()
         $('.remove').remove()
-        let newsInput = $('.frontDrop').val()
-        console.log(newsInput)
+        let newsInput = $(this).val()
+        // console.log(newsInput)
+        $(".logoImage").css({
+            "width" : "80px",
+            "top" : "5px",
+            "height" : "80px",
+          });
+          $(".frontDrop").css({
+            "width" : "100px",
+            "top" : "40px",
+            "left" : "150px",
+          });
+          $("h1").css({
+            "top" : "17px",
+            "left" : "150px",
+          });
+          $(".wrapper").css({
+            "height" : "100px",
+          });
+
+          $(".newResults").empty();
 
         $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${newsInput}.json?api-key=Ov7TMBFdahAkreAEBSG1GAZGkw7Eznm2`)
         .done(function(data) {
@@ -22,13 +41,13 @@ $(function() {
                 let picURL = this.multimedia[4].url
 
                 // create div  to hold album cover and name
-                $('.newResults').append(`<div class="parent"><img src="${picURL}"><p>${newsTitle}</p></div>`).children().addClass('select')
+                $('.newResults').append(`<li class='news-story'><img src="${picURL}"><p class="newsCont">${newsTitle}</p></li>`).children().addClass('select')
                 
-                })
             })
+        })
 
             .fail(function() {
-            alert("Doesn't work hommie!!!") // i like this
+            alert("Doesn't work hommie!!!")
 
             })
 
