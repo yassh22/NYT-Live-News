@@ -8,31 +8,42 @@
     <link rel="stylesheet" href="./build/css/style.css">
 </head> 
 <body>
-    <section class="wrapper">
-        <div class="logoImage">
-            <img src="assets/images/nyt-logo.svg" alt="nyt logo">
+    <section class="bigWrapper">
+        <header>
+            <div class="logoImage">
+                <img src="images/nyt-logo.svg" alt="nyt logo">
+            </div>
+            <section class="wrapper">
+                <div class="instruction">
+                    <h1>Choose a section:</h1>
+                </div>
+                <div class="selection">
+                    <select class="frontDrop">
+                        <option selected disabled>Sections..</option>
+                        <option value="home">Home</option>
+                        <option value="arts">Arts</option>
+                        <option value="business">Business</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Technology</option>
+                        <option value="fashion">Fashion</option>
+                    </select>
+                </div>
+            </section>
+        </header>
+        <div class="newsGrid"></div>
+            <ul class="newResults"></ul> 
+            <img src="images/ajax-loader.gif" class="loader" alt="Loading Image">
         </div>
-        <h1>Choose a section:</h1>
-        <select class="frontDrop">
-            <option selected disabled>Sections..</option>
-            <option value="home">Home</option>
-            <option value="arts">Arts</option>
-            <option value="business">Business</option>
-            <option value="sports">Sports</option>
-            <option value="technology">Technology</option>
-            <option value="fashion">Fashion</option>
-        </select>
+        <footer>
+            <div class="copyright">
+                <p>©Copyright 2016 INSTANEWS</p>
+            </div>
+        </footer>
     </section>
-    <ul class="newResults">
-    </ul>
-    <footer>
-        <p>©Copyright 2016 INSTANEWS</p>
-    </footer>
-
-      <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-      <script src="js/app.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
