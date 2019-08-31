@@ -31,13 +31,16 @@ $(function() {
 
             $.each(array, function (index, value) {
 
-                let newsLink = value.url
-                let newsTitle = value.abstract
-                let picURL = this.multimedia[4].url
-
-                // create div  to hold album cover and name
-                $('.newResults').append(`<li class='news-story'><div class="combine"><img src="${picURL}"><a href="${newsLink}" target="_blank"><p class="newsCont">${newsTitle}</p></a></div></li>`).children().addClass('select')
+                // Skips the news without images
+                if (this.multimedia.length > 0) {
                 
+                  let newsLink = value.url
+                  let newsTitle = value.abstract
+                  let picURL = this.multimedia[4].url
+
+                  // create div  to hold album cover and name
+                  $('.newResults').append(`<li class='news-story'><div class="combine"><a href="${newsLink}" target="_blank"><img src="${picURL}"><p class="newsCont">${newsTitle}</p></a></div></li>`).children().addClass('select')
+                }
             })
         })
 
@@ -50,12 +53,12 @@ $(function() {
 
     })
 
-    // $(".newResults").on("mouseenter", "li", function(event) {
-    //     $(event.currentTarget).find(".newsCont").slideDown();
-    // });
+    $(".newResults").on("mouseenter", "li", function(event) {
+        $(event.currentTarget).find(".newsCont").slideDown();
+    });
 
-    // $(".newResults").on("mouseleave", "li", function(event) {
-    //   $(event.currentTarget).find(".newsCont").slideUp();
-    // });  
+    $(".newResults").on("mouseleave", "li", function(event) {
+      $(event.currentTarget).find(".newsCont").slideUp();
+    });  
 
 })
